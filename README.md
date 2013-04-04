@@ -18,13 +18,22 @@ needed.
 
 Modules
 -------
+* [Moar-Metrics][]
+  [![Build Status][Moar-Metrics_ci-status]][Moar-Metrics_ci-home]
+
+  > Collect counter and elapsed time metrics for logging or other reporting.
+
+
 * [Moar-Net-Http][]
   [![Build Status][Moar-Net-Http_ci-status]][Moar-Net-Http_ci-home]
 
-  > cURL wrapper and utilities for making HTTP requests
+  > cURL wrapper and utilities for making HTTP requests.
 
 
 ---
+[Moar-Metrics]: https://github.com/bd808/moar-metrics
+[Moar-Metrics_ci-home]: https://travis-ci.org/bd808/moar-metrics
+[Moar-Metrics_ci-status]: https://travis-ci.org/bd808/moar-metrics.png
 [Moar-Net-Http]: https://github.com/bd808/moar-net-http
-[Moar-Net-Http_ci-status]: https://travis-ci.org/bd808/moar-net-http.png
 [Moar-Net-Http_ci-home]: https://travis-ci.org/bd808/moar-net-http
+[Moar-Net-Http_ci-status]: https://travis-ci.org/bd808/moar-net-http.png
