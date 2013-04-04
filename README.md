@@ -19,9 +19,12 @@ needed.
 Modules
 -------
 * [Moar-Net-Http][]
+  [![Build Status][Moar-Net-Http_ci-status]][Moar-Net-Http_ci-home]
 
   > cURL wrapper and utilities for making HTTP requests
 
 
 ---
 [Moar-Net-Http]: https://github.com/bd808/moar-net-http
+[Moar-Net-Http_ci-status]: https://travis-ci.org/bd808/moar-net-http.png
+[Moar-Net-Http_ci-home]: https://travis-ci.org/bd808/moar-net-http
