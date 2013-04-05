@@ -24,6 +24,12 @@ needed.
 
 Modules
 -------
+* [Moar-Log][]
+  [![Build Status][Moar-Log_ci-status]][Moar-Log_ci-home]
+
+  > PSR-3/Monolog logging helpers.
+
+
 * [Moar-Metrics][]
   [![Build Status][Moar-Metrics_ci-status]][Moar-Metrics_ci-home]
 
@@ -36,10 +42,19 @@ Modules
   > cURL wrapper and utilities for making HTTP requests.
 
 
+* [Moar-Skel][]
+
+  > Module creation skeleton.
+
+
 ---
+[Moar-Log]: https://github.com/bd808/moar-log
+[Moar-Log_ci-home]: https://travis-ci.org/bd808/moar-log
+[Moar-Log_ci-status]: https://travis-ci.org/bd808/moar-log.png
 [Moar-Metrics]: https://github.com/bd808/moar-metrics
 [Moar-Metrics_ci-home]: https://travis-ci.org/bd808/moar-metrics
 [Moar-Metrics_ci-status]: https://travis-ci.org/bd808/moar-metrics.png
 [Moar-Net-Http]: https://github.com/bd808/moar-net-http
 [Moar-Net-Http_ci-home]: https://travis-ci.org/bd808/moar-net-http
 [Moar-Net-Http_ci-status]: https://travis-ci.org/bd808/moar-net-http.png
+[Moar-Skel]: https://github.com/bd808/moar-skel
