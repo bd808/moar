@@ -24,27 +24,13 @@ needed.
 
 Modules
 -------
-* [Moar-Log][]
-  [![Build Status][Moar-Log_ci-status]][Moar-Log_ci-home]
 
-  > PSR-3/Monolog logging helpers.
-
-
-* [Moar-Metrics][]
-  [![Build Status][Moar-Metrics_ci-status]][Moar-Metrics_ci-home]
-
-  > Collect counter and elapsed time metrics for logging or other reporting.
-
-
-* [Moar-Net-Http][]
-  [![Build Status][Moar-Net-Http_ci-status]][Moar-Net-Http_ci-home]
-
-  > cURL wrapper and utilities for making HTTP requests.
-
-
-* [Moar-Skel][]
-
-  > Module creation skeleton.
+| Status | Project | Description |
+| :----- | :------ | :---------- |
+| [![Build Status][Moar-Log_ci-status]][Moar-Log_ci-home] | [Moar-Log][] | PSR-3/Monolog logging helpers. |
+| [Moar-Metrics][] | [![Build Status][Moar-Metrics_ci-status]][Moar-Metrics_ci-home] | Collect counter and elapsed time metrics for logging or other reporting. |
+| [Moar-Net-Http][] | [![Build Status][Moar-Net-Http_ci-status]][Moar-Net-Http_ci-home] | cURL wrapper and utilities for making HTTP requests. |
+| | [Moar-Skel][] | Module creation skeleton. |
 
 
 ---
