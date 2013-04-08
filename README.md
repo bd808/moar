@@ -18,7 +18,7 @@ them to. When I'm working on sideprojects that happen to involve PHP I'm often
 frustrated that I don't have access to these valuable building blocks.
 
 Moar is slow attempt to recreate the truly valuable parts in a way that is
-a decoupled as possible. I don't want a giant pile of code that every other
+as decoupled as possible. I don't want a giant pile of code that every other
 project needs to be based on, but I would like a toolbox that can help when
 needed.
 
