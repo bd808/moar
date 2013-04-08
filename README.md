@@ -31,6 +31,7 @@ Modules
 | [![Build Status][Moar-Metrics_ci-status]][Moar-Metrics_ci-home] | [Moar-Metrics][] | Collect counter and elapsed time metrics for logging or other reporting. |
 | [![Build Status][Moar-Net-Http_ci-status]][Moar-Net-Http_ci-home] | [Moar-Net-Http][] | cURL wrapper and utilities for making HTTP requests. |
 | | [Moar-Skel][] | Module creation skeleton. |
+| [![Build Status][Moar-Template-Block_ci-status]][Moar-Template-Block_ci-home] | [Moar-Template-Block][] | Block based template system. |
 
 
 ---
@@ -44,3 +45,6 @@ Modules
 [Moar-Net-Http_ci-home]: https://travis-ci.org/bd808/moar-net-http
 [Moar-Net-Http_ci-status]: https://travis-ci.org/bd808/moar-net-http.png
 [Moar-Skel]: https://github.com/bd808/moar-skel
+[Moar-Template-Block]: https://github.com/bd808/moar-template-block
+[Moar-Template-Block_ci-home]: https://travis-ci.org/bd808/moar-template-block
+[Moar-Template-Block_ci-status]: https://travis-ci.org/bd808/moar-template-block.png
