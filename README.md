@@ -27,6 +27,7 @@ Modules
 
 | Status | Project | Description |
 | :----- | :------ | :---------- |
+| [![Build Status][Moar-Elasticsearch_ci-status]][Moar-Elasticsearch_ci-home] | [Moar-Elasticsearch][] | Tools for working with ElasticSearch. |
 | [![Build Status][Moar-Log_ci-status]][Moar-Log_ci-home] | [Moar-Log][] | PSR-3/Monolog logging helpers. |
 | [![Build Status][Moar-Metrics_ci-status]][Moar-Metrics_ci-home] | [Moar-Metrics][] | Collect counter and elapsed time metrics for logging or other reporting. |
 | [![Build Status][Moar-Net-Http_ci-status]][Moar-Net-Http_ci-home] | [Moar-Net-Http][] | cURL wrapper and utilities for making HTTP requests. |
@@ -35,6 +36,9 @@ Modules
 
 
 ---
+[Moar-Elasticsearch]: https://github.com/bd808/moar-elasticsearch
+[Moar-Elasticsearch_ci-home]: https://travis-ci.org/bd808/moar-elasticsearch
+[Moar-Elasticsearch_ci-status]: https://travis-ci.org/bd808/moar-elasticsearch.png
 [Moar-Log]: https://github.com/bd808/moar-log
 [Moar-Log_ci-home]: https://travis-ci.org/bd808/moar-log
 [Moar-Log_ci-status]: https://travis-ci.org/bd808/moar-log.png
