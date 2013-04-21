@@ -31,6 +31,7 @@ Modules
 | [![Build Status][Moar-Log_ci-status]][Moar-Log_ci-home] | [Moar-Log][] | PSR-3/Monolog logging helpers. |
 | [![Build Status][Moar-Metrics_ci-status]][Moar-Metrics_ci-home] | [Moar-Metrics][] | Collect counter and elapsed time metrics for logging or other reporting. |
 | [![Build Status][Moar-Net-Http_ci-status]][Moar-Net-Http_ci-home] | [Moar-Net-Http][] | cURL wrapper and utilities for making HTTP requests. |
+| [![Build Status][Moar-Selector_ci-status]][Moar-Selector_ci-home] | [Moar-Selector][] | Select a target value from an object, object graph or array. |
 | | [Moar-Skel][] | Module creation skeleton. |
 | [![Build Status][Moar-Template-Block_ci-status]][Moar-Template-Block_ci-home] | [Moar-Template-Block][] | Block based template system. |
 
@@ -48,6 +49,9 @@ Modules
 [Moar-Net-Http]: https://github.com/bd808/moar-net-http
 [Moar-Net-Http_ci-home]: https://travis-ci.org/bd808/moar-net-http
 [Moar-Net-Http_ci-status]: https://travis-ci.org/bd808/moar-net-http.png
+[Moar-Selector]: https://github.com/bd808/moar-selector
+[Moar-Selector_ci-home]: https://travis-ci.org/bd808/moar-selector
+[Moar-Selector_ci-status]: https://travis-ci.org/bd808/moar-selector.png
 [Moar-Skel]: https://github.com/bd808/moar-skel
 [Moar-Template-Block]: https://github.com/bd808/moar-template-block
 [Moar-Template-Block_ci-home]: https://travis-ci.org/bd808/moar-template-block
