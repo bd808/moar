@@ -13,10 +13,7 @@ Moar PHP Library
 Moar is a smallish collection of PHP libraries and frameworks maintained by
 Bryan Davis.
 
-Modules
-=======
 .. toctree::
-    :maxdepth: 1
-    :glob:
+   :maxdepth: 1
 
-    modules/**
+   modules
