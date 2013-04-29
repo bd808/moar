@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 
-import sys, os
+import os
+import sphinx_bootstrap_theme
+import sys
 from datetime import date
+from pygments.lexers.web import PhpLexer
+from sphinx.highlighting import lexers
 
 extensions = ['sphinxcontrib.phpdomain']
 templates_path = ['_templates']
@@ -14,8 +18,6 @@ release = version
 exclude_patterns = ['_build']
 pygments_style = 'sphinx'
 
-from sphinx.highlighting import lexers
-from pygments.lexers.web import PhpLexer
 lexers['php'] = PhpLexer(startinline=True)
 primary_domain = 'php'
 
@@ -23,7 +25,12 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
   html_theme = 'default'
 else:
-  html_theme = 'nature'
+  html_theme = 'bootstrap'
+  html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+  html_theme_options = {
+      'bootswatch_theme': 'cerulean'
+      }
+#end if
 
 html_static_path = ['_static']
 htmlhelp_basename = 'Moardoc'

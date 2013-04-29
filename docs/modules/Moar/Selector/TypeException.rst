@@ -4,33 +4,20 @@ Moar\\Selector\\TypeException
 
 .. php:namespace: Moar\\Selector
 
-.. php:class:: TypeException
+.. php:exception:: TypeException
+
+    extends :php:class:`TraversalException`
 
     Thrown to indicate that a variable of an unexpected type was found.
 
-    .. php:attr:: message
+    .. php:method:: __construct($message = "", $code = 0, $previous = null)
 
-        protected
-
-    .. php:attr:: code
-
-        protected
-
-    .. php:attr:: file
-
-        protected
-
-    .. php:attr:: line
-
-        protected
-
-    .. php:method:: __clone()
-
-    .. php:method:: __construct($message, $code, $previous)
-
-        :param $message:
-        :param $code:
-        :param $previous:
+        :type $message: string
+        :param $message: the message to throw
+        :type $code: int
+        :param $code: Exception code
+        :type $previous: \\Exception
+        :param $previous: Previous exception
 
     .. php:method:: getMessage()
 
@@ -47,3 +34,6 @@ Moar\\Selector\\TypeException
     .. php:method:: getTraceAsString()
 
     .. php:method:: __toString()
+
+    .. php:method:: __clone()
+

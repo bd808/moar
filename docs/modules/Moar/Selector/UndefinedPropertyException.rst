@@ -4,34 +4,21 @@ Moar\\Selector\\UndefinedPropertyException
 
 .. php:namespace: Moar\\Selector
 
-.. php:class:: UndefinedPropertyException
+.. php:exception:: UndefinedPropertyException
+
+    extends :php:class:`TraversalException`
 
     Thrown to indicate that an object did not have a particular member
     property.
 
-    .. php:attr:: message
+    .. php:method:: __construct($message = "", $code = 0, $previous = null)
 
-        protected
-
-    .. php:attr:: code
-
-        protected
-
-    .. php:attr:: file
-
-        protected
-
-    .. php:attr:: line
-
-        protected
-
-    .. php:method:: __clone()
-
-    .. php:method:: __construct($message, $code, $previous)
-
-        :param $message:
-        :param $code:
-        :param $previous:
+        :type $message: string
+        :param $message: the message to throw
+        :type $code: int
+        :param $code: Exception code
+        :type $previous: \\Exception
+        :param $previous: Previous exception
 
     .. php:method:: getMessage()
 

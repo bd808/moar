@@ -6,13 +6,9 @@ Moar\\Selector\\MemberInstruction
 
 .. php:class:: MemberInstruction
 
+    extends :php:class:`Instruction`
+
     Selector instruction which selects a member from an object.
-
-    .. php:attr:: member
-
-        protected string
-
-        Member to select.
 
     .. php:method:: __construct($name)
 

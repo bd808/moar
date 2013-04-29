@@ -9,34 +9,33 @@ Moar\\Selector\\Parser
     Parse a graph traversal statement into a list of executable instructions.
 
     The graph traversal language described here allows:
+
     - selecting a member of an object
     - selecting an array element by index
     - selecting an array element by key
     - selecting array elements by content
     - any combination of the above actions
 
-    Grammar (in psudo-EBNF notation):
-    <pre><code>
-      statement        = selector | index, [ '.', selector ] ;
-      selector         = member, { ( '.', member ) | index } ;
-      member           = identifier | complex ;
-      complex          = '{', ws, literal, ws, '}' ;
-      identifier       = start_char, { ident_char } ;
-      literal          = '"', { not_quote }, '"' |
-                         '\'', { not_single_quote }, '\'' ;
-      index            = '[', ws, expression, ws, ']' ;
+    Grammar (in EBNF_ notation)::
+
+      statement        = selector | index , [ "." , selector ] ;
+      selector         = member , { ( "." , member ) | index } ;
+      member           = identifier | variable-member ;
+      identifier       = start-char , { ident-char } ;
+      variable-member  = "{" , ws , literal , ws , "}" ;
+      index            = "[" , ws , expression , ws , "]" ;
       expression       = value | rule ;
       value            = number | literal ;
-      number           = [ '-' ], { digit }, [ '.', { digit } ] ;
-      rule             = selector, ws, op, ws, value ;
-      ws               =  /\s*?/
-      op               = '=' ;
-      start_char       = /[a-zA-Z_\x7f-\xff]/ ;
-      ident_char       = /[a-zA-Z0-9_\x7f-\xff]/ ;
-      not_quote        = /[^"]/
-      not_single_quote = /[^']/
-      digit            = /[0-9]/ ;
-    </code></pre>
+      rule             = selector , ws , op , ws , value ;
+      literal          = '"' , { all - '"' } , '"'
+                       | "'" , { all - "'" } , "'" ;
+      number           = [ "-" ] , { digit } , [ "." , { digit } ] ;
+      ws               = ? /\s*/ ? ;
+      op               = "=" ;
+      start-char       = ? /[a-zA-Z_\x7f-\xff]/ ? ;
+      ident-char       = ? /[a-zA-Z0-9_\x7f-\xff]/ ? ;
+      digit            = ? /[0-9]/ ? ;
+      all              = ? all visible characters ?
 
     Example paths:
      - foo
@@ -53,56 +52,6 @@ Moar\\Selector\\Parser
      - foo.{"any random string"}.bar
      - foo.{"any random string"}[sel="val"].bar
      - foo.{"any random string"}[{"blah"}.xyzzy="val"].bar
-
-    .. php:const:: START_CHAR
-
-        Regex for identifier start character.
-
-    .. php:const:: IDENT_CHAR
-
-        Regex for identifier body character.
-
-    .. php:const:: ANY_CHAR
-
-        Regex for any character.
-
-    .. php:const:: START_NUMBER
-
-        Regex for a character that can start a number.
-
-    .. php:const:: DIGIT
-
-        Regex for a digit.
-
-    .. php:const:: ANY_QUOTE
-
-        Regex for any quote.
-
-    .. php:const:: WHITESPACE
-
-        Regex for whitespace.
-
-    .. php:const:: START_OPERATOR
-
-        Regex for rule operators.
-
-    .. php:attr:: src
-
-        protected string
-
-        Statement to parse.
-
-    .. php:attr:: ptr
-
-        protected int
-
-        Current parser position.
-
-    .. php:attr:: maxPtr
-
-        protected int
-
-        Maximum parser position.
 
     .. php:method:: __construct($statement)
 
@@ -127,25 +76,25 @@ Moar\\Selector\\Parser
 
         Get the next traversal instruction.
 
-        :returns: Moar\Selector\Instruction Traversal instruction
+        :returns: :php:class:`Instruction` Traversal instruction
 
     .. php:method:: parseMember()
 
         Parse a member identifier.
 
-        :returns: Moar\Selector\Instruction Traversal instruction
+        :returns: :php:class:`Instruction` Traversal instruction
 
     .. php:method:: parseIndex()
 
         Parse an array index instruction.
 
-        :returns: Moar\Selector\Instruction Traversal instruction
+        :returns: :php:class:`Instruction` Traversal instruction
 
     .. php:method:: parseIndexRule()
 
         Parse an index selector rule.
 
-        :returns: Moar\Selector\Instruction Traversal instruction
+        :returns: :php:class:`Instruction` Traversal instruction
 
     .. php:method:: parseLiteral()
 
@@ -171,7 +120,7 @@ Moar\\Selector\\Parser
 
         Are we at the end of the input?
 
-        :returns: bool True if at end, false otherwise
+        :returns: boolean True if at end, false otherwise
 
     .. php:method:: peek($len = 1, $offset = 0)
 
@@ -191,7 +140,7 @@ Moar\\Selector\\Parser
         :param $str: String to expect
         :type $offset: int|string
         :param $offset: How far to skip before looking
-        :returns: bool True if expected string is in input, false otherwise
+        :returns: boolean True if expected string is in input, false otherwise
 
     .. php:method:: expectMatch($pattern, $len = 1, $offset = 0)
 
@@ -203,7 +152,7 @@ Moar\\Selector\\Parser
         :param $len: How far to look ahead
         :type $offset: int
         :param $offset: How far to skip before looking
-        :returns: bool True if expected pattern matches input, false otherwise
+        :returns: boolean True if expected pattern matches input, false otherwise
 
     .. php:method:: consume($what = 1)
 
@@ -221,9 +170,11 @@ Moar\\Selector\\Parser
 
     .. php:method:: makeException($msg)
 
-        Build and return a Moar\Selector\ParseException with the current parser
+        Build and return a Moar\\Selector\\ParseException with the current parser
         position.
 
         :type $msg: string
         :param $msg: Error message
-        :returns: Moar\Selector\ParseException Exception
+        :returns: :php:class:`ParseException` Exception
+
+.. _EBNF: https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_Form

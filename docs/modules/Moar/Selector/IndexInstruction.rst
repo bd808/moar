@@ -6,13 +6,9 @@ Moar\\Selector\\IndexInstruction
 
 .. php:class:: IndexInstruction
 
+    extends :php:class:`Instruction`
+
     Selector instruction which retrieves data from an array.
-
-    .. php:attr:: idx
-
-        protected mixed
-
-        Array index.
 
     .. php:method:: __construct($name)
 
